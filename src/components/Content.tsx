@@ -103,12 +103,12 @@ export default async function Content({ lng }: { lng: string }) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <img
               className="w-full rounded-lg"
-              src="/fba-2.jpg"
+              src="/images/landing_page/fba-2.jpg"
               alt="office content 1"
             />
             <img
               className="w-full h-full lg:mt-10 rounded-lg"
-              src="/fba-1.jpg"
+              src="/images/landing_page/fba-1.jpg"
               alt="office content 2"
             />
           </div>
@@ -120,7 +120,7 @@ export default async function Content({ lng }: { lng: string }) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <img
               className="w-full rounded-lg"
-              src="/fbm-222.jpeg"
+              src="/images/landing_page/fbm-222.jpeg"
               alt="office content 1"
             />
             <img
@@ -156,12 +156,12 @@ export default async function Content({ lng }: { lng: string }) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <img
               className="w-full rounded-lg"
-              src="/wholesale-111.jpg"
+              src="/images/landing_page/wholesale-111.jpg"
               alt="office content 1"
             />
             <img
               className="w-full lg:mt-10 rounded-lg"
-              src="/wholesale-222.webp"
+              src="/images/landing_page/wholesale-222.webp"
               alt="office content 2"
             />
           </div>
@@ -173,12 +173,12 @@ export default async function Content({ lng }: { lng: string }) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <img
               className="w-full rounded-lg"
-              src="/dropshipping-2.jpg"
+              src="/images/landing_page/dropshipping-2.jpg"
               alt="office content 1"
             />
             <img
               className="w-full lg:mt-10 rounded-lg"
-              src="/dropshipping-1.png"
+              src="/images/landing_page/dropshipping-1.png"
               alt="office content 2"
             />
           </div>
@@ -209,12 +209,12 @@ export default async function Content({ lng }: { lng: string }) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <img
               className="w-full rounded-lg"
-              src="/ltl-2222.jpg"
+              src="/images/landing_page/ltl-2222.jpg"
               alt="office content 1"
             />
             <img
               className="w-full lg:mt-10 rounded-lg"
-              src="/ltl-1111.jpg"
+              src="/images/landing_page/ltl-1111.jpg"
               alt="office content 2"
             />
           </div>
