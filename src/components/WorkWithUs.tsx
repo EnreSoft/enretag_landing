@@ -40,7 +40,7 @@ export  default async function WorkWithUs(props: Readonly<IProps>) {
                   </div>
                   <div className="py-3 sm:py-4">
                     <img
-      src='/soft.jpeg'
+      src='/images/why_choose_us/soft.jpeg'
       alt='second image'
       className={'w-full rounded-2xl'}
     />

@@ -33,7 +33,7 @@ export default async function About1({ params: { lng } }: { params: { lng: strin
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
                     <img
-                      src="/enretag.jpg"
+                      src="/images/about_page/enretag.jpg"
                       alt=""
                       className="w-full rounded-2xl"
                     />
