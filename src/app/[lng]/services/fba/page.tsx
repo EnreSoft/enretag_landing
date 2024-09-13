@@ -35,7 +35,7 @@ export default function FbaComponent({ params: { lng } }: { params: { lng: strin
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Storage</strong> : Amazon FBA, Amazon'un geniş depo ağına erişim sağlar, böylece envanterinizi Amazon'un gönderim merkezlerinde depolayabilirsiniz. Bu, kendi depolama alanınıza olan ihtiyacı büyük ölçüde azaltır ve genel giderleri en aza indirmeye yardımcı olur.
+                                            <strong className="font-semibold text-amber-500">Storage</strong> : Amazon FBA provides access to Amazon's extensive warehouse network, so you can store your inventory for Amazon to ship. This greatly reduces the spend on your own storage space and helps minimize overhead costs.
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
