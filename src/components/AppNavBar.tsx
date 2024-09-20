@@ -16,7 +16,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav className="bg-main-bg-color border-gray-200 dark:bg-gray-900">
-        <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4 xl:px-24">
           <a
             href={`/${props.lng}`}
             className="flex items-center space-x-3 rtl:space-x-reverse"
