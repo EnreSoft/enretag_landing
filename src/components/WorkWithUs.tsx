@@ -26,7 +26,7 @@ const renderImage = (src: string, alt: string, classes: string) => {
 
 export  default async function WorkWithUs(props: Readonly<IProps>) {
   const { lng } = props;
-  const { t } = await useTranslation(lng, "workWithUs");
+  const { t } = await useTranslation(lng, "translations");
 
   return (
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
@@ -63,10 +63,10 @@ export  default async function WorkWithUs(props: Readonly<IProps>) {
                 {t("Why Choose Us ?")}
                 </h2>
                 <p className="mb-5 text-main-bg-color text-body-color dark:text-dark-6">
-                Enretag is your trusted partner for reliable and fast fulfillment in North America. We stand out with our proprietary software, which ensures real-time tracking, efficient inventory management, and seamless order processing.
+                {t("why-choose-us-paragraph-1")}
                 </p>
                 <p className="mb-8 text-main-bg-color text-body-color dark:text-dark-6">
-                Our technology, combined with a dedicated team, allows you to focus on growing your business while we handle the logistics. Choose Enretag for a fulfillment service that’s efficient, tech-driven, and tailored to your needs.
+                {t("why-choose-us-paragraph-2")}
                 </p>
                 <Link href={`/${lng}/contact`} className="get-started-link bg-button-bg-color hover:bg-amber-500">
                 {t("Contact")}

@@ -18,10 +18,10 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
         <div className="mx-auto max-w-2xl text-left sm:text-center">
           {/* <h2 className=" font-semibold leading-7 text-main-bg-color">Deliver faster</h2> */}
           <p className="mt-2 text-center text-4xl lg:text-3xl font-bold tracking-tight text-button-bg-color sm:text-4xl">
-            How Enretag Works ?
+            {t('How Enretag Works ?')}
           </p>
           <p className="mt-6 text-lg leading-8 text-main-bg-color hidden lg:inline-flex">
-            Discover how we work and experience &nbsp;<strong>Peace of Mind</strong>.
+            {t('Discover how we work and experience')} &nbsp;<strong>{t('Peace of Mind')}</strong>.
           </p>
           <div>
             <ol className="hidden lg:flex items-center w-full mt-6 ml-10">
@@ -68,7 +68,7 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                     <span className="text-amber-500 font-bold text-4xl">
                       1.{" "}
                     </span>{" "}
-                    Receiving
+                    {t("Receiving")}
                   </span>
                 </dt>
                 <dd className="mt-2  leading-7 text-main-bg-color">
@@ -76,25 +76,25 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                     <li className="flex flex-col gap-y-3">
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          As Fulfillment Center,
+                          {t("As Fulfillment Center,")}
                         </strong>{" "}
                         {t("how-it-works-receiving-paragraph-one")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Upon arrival
+                          {t("Upon arrival")}
                         </strong>{" "}
                         {t("how-it-works-receiving-paragraph-two")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          After the receiving process
+                          {t('After the receiving process')}
                         </strong>{" "}
                         {t("how-it-works-receiving-paragraph-three")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Customer satisfaction
+                          {t("Customer satisfaction")}
                         </strong>{" "}
                         {t("how-it-works-receiving-paragraph-four")}
                       </p>
@@ -141,7 +141,7 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                   </div>
                   <span className="text-main-bg-color text-2xl">
                     <span className="text-amber-500 text-4xl">2.</span>{" "}
-                    Preparing
+                    {t("Preparing")}
                   </span>
                 </dt>
                 <dd className="mt-2  leading-7 text-gray-600">
@@ -149,19 +149,19 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                     <li className="flex flex-col gap-y-3">
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          After your products' boxes are opened
+                          {t("After your products' boxes are opened")}
                         </strong>{" "}
                         {t("how-it-works-preparing-paragraph-one")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Thanks to our advanced software,{" "}
+                          {t("Thanks to our advanced software,")}{" "}
                         </strong>
                         {t("how-it-works-preparing-paragraph-two")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Then,
+                          {t("Then,")}
                         </strong>{" "}
                         {t("how-it-works-preparing-paragraph-three")}
                       </p>
@@ -193,7 +193,7 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                   </div>
                   <span className="text-main-bg-color text-2xl">
                     <span className="text-amber-500 text-4xl">3.</span>{" "}
-                    Packaging & Boxing
+                    {t("Packaging & Boxing")}
                   </span>
                 </dt>
                 <dd className="mt-2  leading-7 text-gray-600">
@@ -201,13 +201,13 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                     <li className="flex flex-col gap-y-3">
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Completed affecting products
+                          {t("Completed affecting products")}
                         </strong>{" "}
                         {t("how-it-works-packaging-paragraph-one")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          During this process,
+                          {t("During this process,")}
                         </strong>{" "}
                         {t("how-it-works-packaging-paragraph-two")}
                       </p>
@@ -254,7 +254,7 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                   </div>
                   <span className="text-main-bg-color text-2xl">
                     <span className="text-amber-500 text-4xl">4.</span>{" "}
-                    Shipment
+                    {t("Shipment")}
                   </span>
                 </dt>
                 <dd className="mt-2  leading-7 text-gray-600">
@@ -262,25 +262,25 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
                     <li className="flex flex-col gap-y-3">
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          After the boxing process
+                          {t("After the boxing process")}
                         </strong>{" "}
                         {t("how-it-works-delivering-paragraph-one")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Once sellers acquire the required labels (e.g., FBA),
+                          {t("Once sellers acquire the required labels (e.g., FBA),")}
                         </strong>{" "}
                         {t("how-it-works-delivering-paragraph-two")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Once documents and labels are completed,
+                          {t("Once documents and labels are completed,")}
                         </strong>{" "}
                         {t("how-it-works-delivering-paragraph-three")}
                       </p>
                       <p>
                         <strong className="font-semibold text-main-bg-color">
-                          Then, our professional team
+                          {t("Then, our professional team")}
                         </strong>{" "}
                         {t("how-it-works-delivering-paragraph-four")}
                       </p>
@@ -318,7 +318,7 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
       href={`/${lng}/contact`}
       className="text-white bg-button-bg-color hover:bg-hover-button-bg-color focus:ring-4 focus:text-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
     >
-      Contact Us
+      {t("Contact Us")}
     </a>
           </div>
         </blockquote>

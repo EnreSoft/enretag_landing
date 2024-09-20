@@ -17,7 +17,7 @@ export default async function ContactUs({ params: { lng } }: { params: { lng: st
         <div className="container px-6 py-12 mx-auto">
           <div>
             <p className="font-medium text-main-bg-color dark:text-blue-400">
-              {t('Contact us')}
+              {t('Contact Us')}
             </p>
 
             <h1 className="mt-2 text-2xl font-semibold text-button-bg-color md:text-3xl dark:text-white">
@@ -126,7 +126,7 @@ export default async function ContactUs({ params: { lng } }: { params: { lng: st
                   </label>
                   <input
                     type="email"
-                    placeholder={t('Email address')}
+                    placeholder={t('Email Address')}
                     className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>

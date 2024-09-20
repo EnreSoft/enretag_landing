@@ -14,7 +14,7 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
       <PartnerLogos />
       <Services lng={lng} />
       <Content lng={lng} />
-      <Testimonals />
+      <Testimonals lng={lng}/>
       <WorkWithUs lng={lng} />
       <PartnerWithUs lng={lng} />
       <Stats lng={lng} />

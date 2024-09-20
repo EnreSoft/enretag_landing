@@ -22,7 +22,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
           'hero-pattern':
           "linear-gradient(to right, rgba(255, 255, 255, 1) 45%, rgba(211, 220, 224, 0) 100%), url('/images/landing_page/getty-images-wLUbZBvfBe0-unsplash.jpg')",
-          "work-with-us-pattern": "linear-gradient(to right bottom, white, rgba(28, 38, 85 , 0.6) 100%), url('https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg')",
+          "work-with-us-pattern": "linear-gradient(to right, rgba(255, 255, 255, 1), rgba(211, 220, 224, 0.7) 100%), url('https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg')",
       },
       textColor: {
         'main-text-color': '#1864abb3'
