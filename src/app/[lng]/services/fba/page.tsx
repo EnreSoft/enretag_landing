@@ -1,7 +1,9 @@
+import { useTranslation } from '@/app/i18n';
 import AppNavBar from '@/components/AppNavBar';
 import { CheckBadgeIcon } from '@heroicons/react/20/solid';
 
-export default function FbaComponent({ params: { lng } }: { params: { lng: string } }) {
+export default async function FbaComponent({ params: { lng } }: { params: { lng: string } }) {
+    const { t } = await useTranslation(lng, "translations"); 
     return (
         <div>
             <AppNavBar lng={lng} />
@@ -10,13 +12,13 @@ export default function FbaComponent({ params: { lng } }: { params: { lng: strin
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div className="lg:pr-4">
                             <div className="lg:max-w-lg">
-                                <p className=" font-semibold leading-7 text-main-bg-color">Enretag LLC.</p>
-                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-button-bg-color sm:text-4xl">Amazon FBA</h1>
+                                <p className=" font-semibold leading-7 text-main-bg-color">{t('Enretag LLC.')}</p>
+                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-button-bg-color sm:text-4xl">{t('Amazon FBA')}</h1>
                                 <p className="mt-6 text-xl leading-8 text-main-bg-color">
-                                If you're an online seller, you might be familiar with the challenges of order fulfillment - storage, packaging, shipping, customer service, and returns. Amazon FBA (Fulfillment by Amazon) is a service designed to relieve these pressures so that you can focus more on growing your business.
+                                {t('services-page-fba-paragraph-1')}
                                 </p>
                                 <p className="mt-6 text-xl leading-8 text-main-bg-color">
-                                Amazon FBA is a comprehensive solution provided by Amazon that takes care of storage, packaging, and shipping of your products. When a customer places an order for your product, Amazon's fulfillment centers take over - they pick, pack, and ship the product on your behalf. This not only reduces your workload but also ensures a swift and professional delivery service.
+                                {t('services-page-fba-paragraph-2')}
                                 </p>
                             </div>
                         </div>
@@ -35,52 +37,52 @@ export default function FbaComponent({ params: { lng } }: { params: { lng: strin
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Storage</strong> : Amazon FBA, Amazon'un geniş depo ağına erişim sağlar, böylece envanterinizi Amazon'un gönderim merkezlerinde depolayabilirsiniz. Bu, kendi depolama alanınıza olan ihtiyacı büyük ölçüde azaltır ve genel giderleri en aza indirmeye yardımcı olur.
+                                            <strong className="font-semibold text-amber-500">{t('Storage')}</strong> : {t("services-page-fba-paragraph-3")}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Packaging & Shipping</strong>  : Amazon handles the complete packaging and shipping process. Once an order is placed, Amazon's team packages the product and ships it to the customer. This ensures a quick and efficient delivery process, improving customer satisfaction.
+                                            <strong className="font-semibold text-amber-500">{t('Packaging & Shipping')}</strong>  : {t("services-page-fba-paragraph-4")}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Customer Service & Returns</strong> : Amazon FBA also covers customer service and the handling of returns. This means any inquiries or issues related to shipping, tracking, and returns are managed by Amazon's customer service.
+                                            <strong className="font-semibold text-amber-500">{t('Customer Service & Returns')}</strong> : {t('services-page-fba-paragraph-5')}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Prime Eligibility</strong> : Products fulfilled by Amazon FBA are automatically eligible for Amazon Prime, thus attracting a vast customer base who prefer fast, free shipping.
+                                            <strong className="font-semibold text-amber-500">{t('Prime Eligibility')}</strong> : {t('services-page-fba-paragraph-6')}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Global Reach</strong> : With Amazon FBA, you can effortlessly sell your products globally by leveraging Amazon's international logistics network.
+                                            <strong className="font-semibold text-amber-500">{t('Global Reach')}</strong> : {t('services-page-fba-paragraph-7')}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Inventory Management</strong> : Amazon provides robust tools and systems to help you manage your inventory effectively. You can track and monitor inventory levels, set up automated replenishment, and benefit from Amazon's forecasting capabilities.
+                                            <strong className="font-semibold text-amber-500">{t('Inventory Management')}</strong> : {t('services-page-fba-paragraph-8')}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3 text-main-bg-color">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Multi-Channel Fulfillment</strong> : In addition to fulfilling orders from Amazon's marketplace, you can also use Amazon FBA to fulfill orders from other sales channels, including your own website or other e-commerce platforms.
+                                            <strong className="font-semibold text-amber-500">{t('Multi-Channel Fulfillment')}</strong> : {t('services-page-fba-paragraph-9')}
                                         </span>
                                     </li>
 
                                     <li className="flex gap-x-3 text-main-bg-color">
-                                        <p>While Amazon FBA provides numerous benefits, it's important to consider the associated costs, which include storage fees, fulfillment fees, and additional service fees. These vary based on the size and weight of your products, and the time of year. It's essential to factor in these costs when determining your product pricing and profitability.</p>
+                                        <p>{t('services-page-fba-paragraph-10')}</p>
                                     </li>
 
                                     <li className="flex gap-x-3 text-main-bg-color">
-                                        <p>In summary, Amazon FBA is an effective solution for online sellers looking to simplify their logistics. By handling storage, packaging, shipping, customer service, and inventory management, Amazon FBA allows sellers to focus on what they do best - sourcing and selling great products. With the added advantage of Prime eligibility and global reach, Amazon FBA can help you reach a wider customer base and streamline your e-commerce operations.</p>
+                                        <p>{t('services-page-fba-paragraph-11')}</p>
                                     </li>
                                 </ul>
                             </div>

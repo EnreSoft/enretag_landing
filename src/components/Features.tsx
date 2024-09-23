@@ -2,7 +2,7 @@ import "@aarsteinmedia/dotlottie-player";
 import { useTranslation } from "@/app/i18n";
 
 export default async function Features({ lng }: { lng: string }) {
-  const { t } = await useTranslation(lng, "features");
+  const { t } = await useTranslation(lng, "translations");
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

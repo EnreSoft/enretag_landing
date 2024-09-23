@@ -5,10 +5,10 @@ import { useTranslation } from "@/app/i18n";
 import DotsSvg from "./docs/svg/Dots";
 
 export default async function Content({ lng }: { lng: string }) {
-  const { t } = await useTranslation(lng, "content");
+  const { t } = await useTranslation(lng, "translations");
   return (
     <section>
-      <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+      <div className="relative isolate overflow-hidden bg-gray-50 rounded-xl px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
@@ -96,7 +96,7 @@ export default async function Content({ lng }: { lng: string }) {
               {t("FBA")}
             </h2>
             <p className="mb-4 text-main-bg-color">
-              {t("If you're an online seller, you might be familiar with the challenges of order fulfillment - storage, packaging, shipping, customer service, and returns. Amazon FBA (Fulfillment by Amazon) is a service designed to relieve these pressures so that you can focus more on growing your business.")}
+              {t("content-fba-paragraph")}
             </p>
             <ReadMoreLink pageLink={`/${lng}/services/fba`} />
           </div>
@@ -135,7 +135,7 @@ export default async function Content({ lng }: { lng: string }) {
               {t("FBM")}
             </h2>
             <p className="mb-4 text-main-bg-color">
-              {t("FBM, or Fulfillment by Merchant, is a popular order fulfillment option that provides sellers with greater control over their inventory and shipping processes. Unlike FBA, FBM allows merchants to manage these aspects themselves.")}
+              {t("content-fbm-paragraph")}
             </p>
             <ReadMoreLink pageLink={`/${lng}/services/fbm`} />
           </div>
@@ -149,7 +149,7 @@ export default async function Content({ lng }: { lng: string }) {
               {t("Wholesale")}
             </h2>
             <p className="mb-4 text-main-bg-color">
-              {t("Wholesale is a dynamic and lucrative platform that empowers businesses to engage in bulk purchasing and selling, creating a mutually beneficial marketplace for wholesalers and retailers alike. This model facilitates the seamless exchange of goods in large quantities, streamlining the supply chain and enabling businesses to scale efficiently.")}
+              {t("content-wholesale-paragraph")}
             </p>
             <ReadMoreLink pageLink={`/${lng}/services/wholesale`} />
           </div>
@@ -188,7 +188,7 @@ export default async function Content({ lng }: { lng: string }) {
               {t("Dropshipping")}
             </h2>
             <p className="mb-4 text-main-bg-color">
-              {t("Dropshipping has become a popular business model for entrepreneurs looking to establish an online retail presence without requiring significant inventory investment. This innovative approach allows sellers to list and sell goods without physically handling them, thus minimizing risk.")}
+              {t("content-dropshipping-paragraph")}
             </p>
             <ReadMoreLink pageLink={`/${lng}/services/dropshipping`} />
           </div>
@@ -202,7 +202,7 @@ export default async function Content({ lng }: { lng: string }) {
               {t("LTL Freight Shipment")}
             </h2>
             <p className="mb-4 text-main-bg-color">
-              {t("In the modern world of commerce, the storage and distribution of products hold great importance. The efficient management of these processes directly affects the success of businesses. It is at this point that shipping with pallets has become an indispensable logistical solution for many companies.")}
+              {t("content-ltl-paragraph")}
             </p>
             <ReadMoreLink pageLink={`/${lng}/services/ltl-freight-shipment`} />
           </div>

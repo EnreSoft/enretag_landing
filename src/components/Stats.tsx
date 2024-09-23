@@ -14,7 +14,7 @@ const renderStatsSection = (text: string, statistics: string) => {
 }
 
 export default async function Stats({ lng }: { lng: string }) {
-    const { t } = await useTranslation(lng, "stats");
+    const { t } = await useTranslation(lng, "translations");
 
     return (
       <div className="bg-white py-24 sm:py-32">

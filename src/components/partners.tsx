@@ -201,5 +201,5 @@ export function WooCommerceSvg() {
 }
 
 export function WayfairSvg() {
-  return <img alt="wayfair-logo" src="/wayfair-logo.png" height={85} width={125} />;
+  return <img alt="wayfair-logo" src="/images/company_logos/wayfair-logo.png" height={85} width={125} />;
 }

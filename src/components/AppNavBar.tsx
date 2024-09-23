@@ -4,18 +4,19 @@ import { Link, LinkIcon } from "@nextui-org/react";
 import TurkeyFlagSvg from "./docs/svg/TurkeyFlag";
 import UsaFlagSvg from "./docs/svg/UsaFlag";
 import CustomDropdownMenu from "./CustomDropdown";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface AppNavBarProps {
   lng: string;
 }
 
 export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
-  const { t } = await useTranslation(props.lng, "navbar");
+  const { t } = await useTranslation(props.lng, "translations");
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav className="bg-main-bg-color border-gray-200 dark:bg-gray-900">
-        <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="w-screen flex flex-wrap items-center justify-between mx-auto p-4 xl:px-24">
           <a
             href={`/${props.lng}`}
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -23,14 +24,16 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
             <img src="/logo-white.png" className="h-16" alt="Flowbite Logo" />
           </a>
           <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
-            <Link
+           <LanguageSwitcher lng={props.lng}/>
+           <Link
               href="https://app.enretag.com/en/home/login"
               target="_blank"
               type="button"
               className="text-white bg-button-bg-color hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Login/Register
+              {t("Login/Register")}
               </Link>
+              
             <button
               data-collapse-toggle="navbar-cta"
               type="button"
@@ -67,7 +70,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   className="block py-2 px-3 lg:p-0 text-white bg-main-bg-color rounded lg:bg-transparent hover:text-button-bg-color transition duration-400"
                   aria-current="page"
                 >
-                  Home
+                  {t("Home")}
                 </a>
               </li>
               <li>
@@ -76,7 +79,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent lg:border-0 lg:p-0 lg:w-auto dark:text-white  dark:focus:text-white dark:hover:bg-gray-700 hover:text-button-bg-color transition duration-400"
                 >
-                  Services{" "}
+                  {t("Services")}{" "}
                   <svg
                     className="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -106,7 +109,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                         href={`/${props.lng}/services/fba`}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        FBA
+                        {t("FBA")}
                       </a>
                     </li>
                     <li>
@@ -114,7 +117,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                         href={`/${props.lng}/services/fbm`}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        FBM
+                        {t("FBM")}
                       </a>
                     </li>
                     <li>
@@ -122,7 +125,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                         href={`/${props.lng}/services/dropshipping`}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        Dropshipping
+                        {t("Dropshipping")}
                       </a>
                     </li>
                     <li>
@@ -130,7 +133,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                         href={`/${props.lng}/services/wholesale`}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        Wholesale
+                        {t("Wholesale")}
                       </a>
                     </li>
                     <li>
@@ -138,7 +141,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                         href={`/${props.lng}/services/ltl-freight-shipment`}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        LTL Freight Shipment
+                        {t("LTL Freight Shipment")}
                       </a>
                     </li>
                   </ul>
@@ -149,7 +152,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   href={`/${props.lng}/about`}
                   className="block py-2 px-3 lg:p-0 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-button-bg-color  transition duration-400"
                 >
-                  About Us
+                  {t("About Us")}
                 </a>
               </li>
               <li>
@@ -157,7 +160,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   href={`/${props.lng}/how-it-works`}
                   className="block py-2 px-3 lg:p-0 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-button-bg-color  transition duration-400"
                 >
-                  How It Works?
+                  {t("How It Works?")}
                 </a>
               </li>
               <li>
@@ -165,7 +168,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   href={`/${props.lng}/contact`}
                   className="block py-2 px-3 lg:p-0 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-button-bg-color  transition duration-400"
                 >
-                  Contact
+                  {t("Contact")}
                 </a>
               </li>
             </ul>

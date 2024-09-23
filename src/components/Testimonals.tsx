@@ -1,19 +1,18 @@
-export default function Testim() {
+import { useTranslation } from "@/app/i18n";
+
+export default async function Testim({ lng }: { lng: string }) {
+    const { t } = await useTranslation(lng, "translations");
   return (
     <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
             <div className="text-center">
-                <h2 className="mt-4 text-3xl font-bold text-button-bg-color sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
+                <h2 className="mt-4 text-3xl font-bold text-button-bg-color sm:text-4xl xl:text-5xl font-pj">{t('Our happy clients say about us')}</h2>
             </div>
 
             <div className="relative mt-10 md:mt-24 md:order-2">
-                <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
-                    <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter" style={{background: "linear-gradient(90deg, #28bffc 0%, #1c2655 100%)"}}></div>
-                </div>
-
-                <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-                    <div className="flex flex-col overflow-hidden shadow-xl">
+                <div className="flex flex-col gap-4 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-4">
+                    <div className="flex flex-col overflow-hidden row-span-2">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
@@ -45,8 +44,7 @@ export default function Testim() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“I've been using Enretag LLC for my fulfillment needs, and I couldn't be happier with the service. Their team is incredibly professional, and they handle my products with the utmost care. Shipping is always fast, and they consistently meet my deadlines. What stands out the most is their attention to detail and the seamless communication throughout the process. Highly recommend them to anyone looking for a reliable fulfillment partner!
-                                    ”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{t('testimonials-1')}</p>
                                 </blockquote>
                             </div>
 
@@ -58,7 +56,7 @@ export default function Testim() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden shadow-xl">
+                    <div className="flex flex-col overflow-hidden col-span-2">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
@@ -90,7 +88,7 @@ export default function Testim() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“Enretag has been a game-changer for my business. Their fulfillment service is quick, efficient, and always reliable. The team is responsive and easy to work with. I highly recommend them!”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{t('testimonials-2')}</p>
                                 </blockquote>
                             </div>
 
@@ -102,7 +100,7 @@ export default function Testim() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden shadow-xl">
+                    <div className="flex flex-col overflow-hidden row-span-1 col-span-2">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
@@ -134,7 +132,7 @@ export default function Testim() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“Fast, hassle-free and affordable service that keeps my business running smoothly. Thanks for all 🙏🙏”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{t('testimonials-3')}</p>
                                 </blockquote>
                             </div>
 

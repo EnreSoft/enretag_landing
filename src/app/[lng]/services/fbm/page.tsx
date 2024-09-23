@@ -1,8 +1,10 @@
+import { useTranslation } from '@/app/i18n';
 import AppNavBar from '@/components/AppNavBar'
 import { CheckBadgeIcon } from '@heroicons/react/20/solid'
 
 
-export default function FbmComponent({ params: { lng } }: { params: { lng: string } }) {
+export default async function FbmComponent({ params: { lng } }: { params: { lng: string } }) {
+    const { t } = await useTranslation(lng, "translations");
     return (
         <div>
             <AppNavBar lng={lng} />
@@ -11,10 +13,10 @@ export default function FbmComponent({ params: { lng } }: { params: { lng: strin
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div className="lg:pr-4">
                             <div className="lg:max-w-lg">
-                                <p className=" font-semibold leading-7 text-main-bg-color">Enretag LLC.</p>
-                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-button-bg-color sm:text-4xl">FBM (Fulfillment by Merchant)</h1>
+                                <p className=" font-semibold leading-7 text-main-bg-color">{t('Enretag LLC.')}</p>
+                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-button-bg-color sm:text-4xl">{t('FBM (Fulfillment by Merchant)')}</h1>
                                 <p className="mt-6 text-xl leading-8 text-main-bg-color">
-                                Fulfillment by Merchant (FBM) is a sales model where sellers manage their own inventory and directly package and ship orders themselves. In this system, sellers do not utilize Amazon's warehouses; instead, they acquire products from their own warehouses or suppliers and independently package and ship these products when customer orders are received. FBM provides sellers with greater control and flexibility. This model is particularly preferred for unique products or customized orders.
+                                {t('services-page-fbm-paragraph-1')}
                                 </p>
                             </div>
                         </div>
@@ -33,25 +35,25 @@ export default function FbmComponent({ params: { lng } }: { params: { lng: strin
                                     <li className="flex gap-x-3">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Enretag LLC's advanced software</strong> : Thanks to Enretag LLC's advanced software, orders from your e-commerce platform accounts are automatically received by our system.
+                                            <strong className="font-semibold text-amber-500">{t("Enretag LLC's advanced software")}</strong> : {t("Thanks to Enretag LLC's advanced software, orders from your e-commerce platform accounts are automatically received by our system.")}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Storage</strong>  : Sellers can avail sales services directly from Enretag LLC's warehouses, eliminating the need for renting storage space for their products.
+                                            <strong className="font-semibold text-amber-500">Storage</strong>  : {t("Sellers can avail sales services directly from Enretag LLC's warehouses, eliminating the need for renting storage space for their products.")}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Orders</strong> : All products will be stored in our warehouses immediately after the purchase process and will be dispatched to customers according to your preferences. We will take care of managing your orders, allowing you to focus on your business.
+                                            <strong className="font-semibold text-amber-500">{t('Orders')}</strong> : {t('All products will be stored in our warehouses immediately after the purchase process and will be dispatched to customers according to your preferences. We will take care of managing your orders, allowing you to focus on your business.')}
                                         </span>
                                     </li>
                                     <li className="flex gap-x-3">
                                         <CheckBadgeIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-main-bg-color" />
                                         <span>
-                                            <strong className="font-semibold text-amber-500">Safety your product</strong> : Our team is dedicated to product preparation, packaging, complying with the requirements of the e-commerce platform, and ensuring the safety of your products. You can rest assured that your products will reach the buyer on time and in good condition.
+                                            <strong className="font-semibold text-amber-500">{t('Safety your product')}</strong> : {t('Our team is dedicated to product preparation, packaging, complying with the requirements of the e-commerce platform, and ensuring the safety of your products. You can rest assured that your products will reach the buyer on time and in good condition.')}
                                         </span>
                                     </li>
                                 </ul>

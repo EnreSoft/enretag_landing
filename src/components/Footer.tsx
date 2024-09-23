@@ -1,6 +1,7 @@
+import { useTranslation } from "@/app/i18n";
 
 export default async function Footer({ lng }: { lng: string }) {
-
+  const { t } = await useTranslation(lng, "translations");
   return (
     <footer className="font-sans tracking-wide bg-main-bg-color px-8 py-12 w-screen">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
@@ -70,7 +71,7 @@ export default async function Footer({ lng }: { lng: string }) {
 
         <div>
           <h4 className="text-white font-semibold text-lg relative max-sm:cursor-pointer">
-            Navigation
+            {t('Navigation')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -89,7 +90,7 @@ export default async function Footer({ lng }: { lng: string }) {
           <ul className="mt-6 space-y-5">
             <li>
               <a href={`/${lng}`} className="hover:text-white text-gray-300 text-sm">
-                Home
+                {t('Home')}
               </a>
             </li>
             <li>
@@ -97,7 +98,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/about`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                About Us
+                {t('About Us')}
               </a>
             </li>
             <li>
@@ -105,7 +106,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/contact`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                Contact
+                {t('Contact')}
               </a>
             </li>
             <li>
@@ -113,7 +114,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/how-it-works`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                How it works
+                {t('How it works')}
               </a>
             </li>
           </ul>
@@ -121,7 +122,7 @@ export default async function Footer({ lng }: { lng: string }) {
 
         <div>
           <h4 className="text-white font-semibold text-lg relative max-sm:cursor-pointer">
-            Services
+            {t('Services')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -142,7 +143,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/services/fba`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                FBA
+                {t('FBA')}
               </a>
             </li>
             <li>
@@ -150,7 +151,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/services/fbm`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                FBM
+                {t('FBM')}
               </a>
             </li>
             <li>
@@ -158,7 +159,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/services/wholesale`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                Wholesale
+                {t('Wholesale')}
               </a>
             </li>
             <li>
@@ -166,7 +167,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/services/dropshipping`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                Dropshipping
+                {t('Dropshipping')}
               </a>
             </li>
             <li>
@@ -174,7 +175,7 @@ export default async function Footer({ lng }: { lng: string }) {
                 href={`/${lng}/services/ltl-freight-shipment`}
                 className="hover:text-white text-gray-300 text-sm"
               >
-                LTL-Freight Shipment
+                {t('LTL Freight Shipment')}
               </a>
             </li>
           </ul>
@@ -314,7 +315,7 @@ export default async function Footer({ lng }: { lng: string }) {
 
       <div className="flex flex-wrap max-md:flex-col gap-4">
         <p className="text-gray-300 text-sm">
-          © Copyright 2023 Enretag LLC. All Rights Reserved
+          {t('© Copyright 2023 Enretag LLC. All Rights Reserved')}
         </p>
       </div>
     </footer>
