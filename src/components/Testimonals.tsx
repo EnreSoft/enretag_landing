@@ -3,7 +3,7 @@ import { useTranslation } from "@/app/i18n";
 export default async function Testim({ lng }: { lng: string }) {
     const { t } = await useTranslation(lng, "translations");
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20 rounded-xl">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
             <div className="text-center">
@@ -12,7 +12,7 @@ export default async function Testim({ lng }: { lng: string }) {
 
             <div className="relative mt-10 md:mt-24 md:order-2">
                 <div className="flex flex-col gap-4 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-4">
-                    <div className="flex flex-col overflow-hidden row-span-2">
+                    <div className="flex flex-col overflow-hidden row-span-2 rounded-xl">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
@@ -56,7 +56,7 @@ export default async function Testim({ lng }: { lng: string }) {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden col-span-2">
+                    <div className="flex flex-col overflow-hidden col-span-2 rounded-xl">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
@@ -100,7 +100,7 @@ export default async function Testim({ lng }: { lng: string }) {
                         </div>
                     </div>
 
-                    <div className="flex flex-col overflow-hidden row-span-1 col-span-2">
+                    <div className="flex flex-col overflow-hidden row-span-1 col-span-2 rounded-xl">
                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
                             <div className="flex-1">
                                 <div className="flex items-center">
