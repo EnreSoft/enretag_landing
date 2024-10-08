@@ -4,6 +4,7 @@ import "../globals.css";
 import { dir } from 'i18next'
 import { languages } from "../i18n/settings";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
@@ -25,11 +26,10 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={inter.className}>
+      <Toaster position="top-center" />
         {children}
         <Footer lng={lng} />
-
         <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
-        
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
         <script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"

@@ -5,6 +5,7 @@ import { useTranslation } from "@/app/i18n";
 import AppNavBar from "@/components/AppNavBar";
 import WhatsappSvg from "@/components/docs/svg/Whatsapp";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { toast } from 'react-hot-toast';
 
 export default function ContactForm({
   params: { lng },
@@ -51,13 +52,13 @@ export default function ContactForm({
       );
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
       } else {
-        alert("Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      console.error("Failed to send message. Please try again.", error);
+      toast.error("Failed to send message. Please try again.");
     }
   };
 
@@ -72,6 +73,7 @@ export default function ContactForm({
             <input
               type="text"
               name="firstName"
+              required
               value={formData.firstName}
               onChange={handleInputChange}
               placeholder={lng === "en" ? "First Name" : lng === "tr" ? "Ad" : "Nombre"}
@@ -86,6 +88,7 @@ export default function ContactForm({
             <input
               type="text"
               name="lastName"
+              required
               value={formData.lastName}
               onChange={handleInputChange}
               placeholder={lng === "en" ? "Last Name" : lng === "tr" ? "Soyad" : "Apellido"}
@@ -101,6 +104,7 @@ export default function ContactForm({
           <input
             type="email"
             name="email"
+            required
             value={formData.email}
             onChange={handleInputChange}
             placeholder={lng === "en" ? "Email Address" : lng === "tr" ? "E-posta Adresi" : "Correo Electrónico"}
@@ -115,6 +119,7 @@ export default function ContactForm({
           <textarea
             name="message"
             value={formData.message}
+            required
             onChange={handleInputChange}
             className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
             placeholder={lng === "en" ? "We want to hear from you." : lng === "tr" ? "Sizden haber almak istiyoruz." : "Queremos saber de ti."}
