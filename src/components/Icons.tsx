@@ -1,5 +1,17 @@
 import React from "react";
-export const ChevronDown = ({fill, size, height, width, ...props}: {fill: any, size: string | undefined | number | null | undefined, height: string | undefined | number | null | undefined, width: string | undefined | number | null | undefined, [key: string]: any}): JSX.Element => {
+export const ChevronDown = ({
+  fill,
+  size,
+  height,
+  width,
+  ...props
+}: {
+  fill: any;
+  size: string | undefined | number | null | undefined;
+  height: string | undefined | number | null | undefined;
+  width: string | undefined | number | null | undefined;
+  [key: string]: any;
+}): JSX.Element => {
   return (
     <svg
       fill="none"
@@ -21,7 +33,19 @@ export const ChevronDown = ({fill, size, height, width, ...props}: {fill: any, s
   );
 };
 
-export const Lock = ({fill, size, height, width, ...props}: {fill: any, size: any, height: any, width: any, [key: string]: any}) => {
+export const Lock = ({
+  fill,
+  size,
+  height,
+  width,
+  ...props
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+  [key: string]: any;
+}) => {
   const color = fill;
 
   return (
@@ -68,7 +92,19 @@ export const Lock = ({fill, size, height, width, ...props}: {fill: any, size: an
   );
 };
 
-export const Activity = ({fill, size, height, width, ...props}: {fill: any, size: any, height: any, width: any, [key: string]: any}) => {
+export const Activity = ({
+  fill,
+  size,
+  height,
+  width,
+  ...props
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+  [key: string]: any;
+}) => {
   return (
     <svg
       height={size || height || 24}
@@ -99,7 +135,12 @@ export const Flash = ({
   height,
   width,
   ...props
-}: {fill: any, size: any, height: any, width: any}) => {
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+}) => {
   return (
     <svg
       fill="none"
@@ -127,7 +168,12 @@ export const Server = ({
   height,
   width,
   ...props
-}: {fill: any, size: any, height: any, width: any}) => {
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+}) => {
   return (
     <svg
       fill="none"
@@ -154,7 +200,12 @@ export const TagUser = ({
   height,
   width,
   ...props
-}: {fill: any, size: any, height: any, width: any}) => {
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+}) => {
   return (
     <svg
       fill="none"
@@ -183,14 +234,18 @@ export const TagUser = ({
   );
 };
 
-
 export const Scale = ({
   fill = "currentColor",
   size,
   height,
   width,
   ...props
-}: {fill: any, size: any, height: any, width: any}) => {
+}: {
+  fill: any;
+  size: any;
+  height: any;
+  width: any;
+}) => {
   return (
     <svg
       fill="none"
@@ -217,3 +272,130 @@ export const Scale = ({
     </svg>
   );
 };
+
+export const UsaFlag = () => {
+  return (
+    <svg
+      aria-hidden="true"
+      className="h-3.5 w-3.5 rounded-full me-2"
+      xmlns="http://www.w3.org/2000/svg"
+      id="flag-icon-css-us"
+      viewBox="0 0 512 512"
+    >
+      <g fill-rule="evenodd">
+        <g stroke-width="1pt">
+          <path
+            fill="#bd3d44"
+            d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+            transform="scale(3.9385)"
+          />
+          <path
+            fill="#fff"
+            d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+            transform="scale(3.9385)"
+          />
+        </g>
+        <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)" />
+        <path
+          fill="#fff"
+          d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+          transform="scale(3.9385)"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const SpainFlag = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      className="h-3.5 w-3.5 rounded-full me-2"
+      viewBox="0 0 256 256"
+    >
+      <defs></defs>
+      <g
+        style={{
+          stroke: "none",
+          strokeWidth: 0,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 10,
+          fill: "none",
+          fillRule: "nonzero",
+          opacity: 1,
+        }}
+        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+      >
+        <path
+          d="M 0 45 c 0 8.199 2.202 15.88 6.034 22.5 h 77.932 C 87.798 60.88 90 53.199 90 45 c 0 -8.199 -2.202 -15.88 -6.034 -22.5 H 6.034 C 2.202 29.12 0 36.801 0 45 z"
+          style={{
+            stroke: "none",
+            strokeWidth: 1,
+            strokeDasharray: "none",
+            strokeLinecap: "butt",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: 10,
+            fill: "rgb(255,196,0)",
+            fillRule: "nonzero",
+            opacity: 1,
+          }}
+          transform=" matrix(1 0 0 1 0 0) "
+          stroke-linecap="round"
+        />
+        <path
+          d="M 83.966 22.5 c -0.269 -0.465 -0.546 -0.926 -0.831 -1.381 C 75.176 8.438 61.077 0 45 0 c -8.201 0 -15.881 2.205 -22.5 6.04 c -6.357 3.682 -11.736 8.867 -15.635 15.08 C 6.58 21.574 6.304 22.035 6.034 22.5 H 83.966 z"
+          style={{
+            stroke: "none",
+            strokeWidth: 1,
+            strokeDasharray: "none",
+            strokeLinecap: "butt",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: 10,
+            fill: "rgb(198,11,30)",
+            fillRule: "nonzero",
+            opacity: 1,
+          }}
+          transform=" matrix(1 0 0 1 0 0) "
+          stroke-linecap="round"
+        />
+        <path
+          d="M 6.034 67.5 c 0.269 0.465 0.546 0.926 0.831 1.38 c 3.899 6.213 9.278 11.397 15.635 15.08 C 29.119 87.795 36.799 90 45 90 c 16.077 0 30.176 -8.438 38.135 -21.12 c 0.285 -0.455 0.562 -0.915 0.831 -1.38 H 6.034 z"
+          style={{
+            stroke: "none",
+            strokeWidth: 1,
+            strokeDasharray: "none",
+            strokeLinecap: "butt",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: 10,
+            fill: "rgb(198,11,30)",
+            fillRule: "nonzero",
+            opacity: 1,
+          }}
+          transform=" matrix(1 0 0 1 0 0) "
+          stroke-linecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+
+
+export const TurkeyFlag = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-3.5 w-3.5 rounded-full me-2"
+      viewBox="0 -30000 90000 60000"
+    >
+      <title>Flag of Turkey</title>
+      <path fill="#e30a17" d="m0-30000h90000v60000H0z" />
+      <path
+        fill="#fff"
+        d="m41750 0 13568-4408-8386 11541V-7133l8386 11541zm925 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"
+      />
+    </svg>
+  );
+}
