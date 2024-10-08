@@ -20,6 +20,5 @@ export default async function PartnerWithUs({ lng }: { lng: string }) {
       </div>
     </div>
   </div>
-
   );
 }

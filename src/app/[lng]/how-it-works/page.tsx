@@ -313,7 +313,18 @@ export default async function HowItWorks({ params: { lng } }: { params: { lng: s
           <p>
             {t("how-it-works-quote")}
           </p>
-          <div className="mt-4">
+          <div className="flex flex-row justify-end mt-4">
+          <svg
+            className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4 self"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 18 14"
+          >
+            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+          </svg>
+          </div>
+          <div className="mt-4 flex flex-row justify-center">
           <a
       href={`/${lng}/contact`}
       className="text-white bg-button-bg-color hover:bg-hover-button-bg-color focus:ring-4 focus:text-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
