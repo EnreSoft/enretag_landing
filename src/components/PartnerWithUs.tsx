@@ -5,7 +5,7 @@ export default async function PartnerWithUs({ lng }: { lng: string }) {
   return (
     <div className="bg-main-bg-color w-full bg-work-with-us-pattern bg-center bg-cover">
     <div className="grid md:grid-cols-1 gap-4 items-center overflow-hidden">
-      <div className="p-6 max-w-xl mx-auto">
+      <div className="p-6 max-w-2xl mx-auto">
         <h1 className="sm:text-4xl text-2xl font-bold text-main-bg-color">{t('Partner With Us, Forget the Rest!')}</h1>
         <div className="mt-6">
           <p className="text-lg font-bold text-main-bg-color"><strong className="text-amber-500">{t('Partner with us')}</strong>, {t('and let us take care of all the logistics while you focus on growing your business.')}</p>
