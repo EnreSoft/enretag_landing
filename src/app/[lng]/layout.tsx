@@ -5,6 +5,7 @@ import { dir } from 'i18next'
 import { languages } from "../i18n/settings";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
@@ -35,6 +36,33 @@ export default function RootLayout({
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
         ></script>
+        <Script id="amazon-connect-script" strategy="afterInteractive">
+        {`
+          (function(w, d, x, id) {
+            var s = d.createElement('script');
+            s.src = 'https://dtn7rvxwwlhud.cloudfront.net/amazon-connect-chat-interface-client.js';
+            s.async = true;
+            s.id = id;
+            d.getElementsByTagName('head')[0].appendChild(s);
+            w[x] = w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+          })(window, document, 'amazon_connect', 'aca169d6-a60d-4dba-9016-126104af36e2');
+
+          amazon_connect('styles', {
+            iconType: 'CHAT',
+            openChat: { color: '#ffffff', backgroundColor: '#123456' },
+            closeChat: { color: '#ffffff', backgroundColor: '#123456' }
+          });
+
+          amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdIeHdLZjBQTE1qV0ZuSFVBeFpGVXplQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNV0dKN0ZsZkVOREtTbHkzYUFnRVFnQ3RZdXlPSFJLOXl0WS81UlVKTzZna0trd3h1QXlWSk5jVUFBWnpjNUNUTFZMdXdpekZ4TUMrbTRtSEw6OlpkTW0yR2JLcXY0YkgvaVR3L3Y1UzhyZmRkSTE1RmY4YktKQnBmZEx0OXVnc2o5aHdGaTN2OHkwTVpqT2ZLazY2clpybnhXWUJFejRkSDVsR3hKcGMzY0pDTE1QRFAzZ0JLUTFoT0RmNWF4RlJBdURLQVBVb2htaHM4WENqMlNqYlI2dHQwYmtHQ2ZEZksxeVBjWTNMNWVQbVRqV1JKQT0=');
+
+          amazon_connect('supportedMessagingContentTypes', [
+            'text/plain',
+            'text/markdown',
+            'application/vnd.amazonaws.connect.message.interactive',
+            'application/vnd.amazonaws.connect.message.interactive.response'
+          ]);
+        `}
+      </Script>
       </body>
     </html>
   );

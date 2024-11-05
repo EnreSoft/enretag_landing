@@ -1,0 +1,11 @@
+RewriteEngine On
+# HTTPS'yi zorla
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+# _next ile balayan URL'leri hariç tut
+RewriteCond %{REQUEST_URI} !^/_next
+
+# eğer ana dizine istek gelirse /en'ye yönlendir
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^/?$ /en [R,L]
