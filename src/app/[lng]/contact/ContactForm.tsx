@@ -41,7 +41,7 @@ export default function ContactForm({
 
     try {
       const response = await fetch(
-        "https://api.enretag.com/api/v1/contact-us",
+        "https://app.enretag.com/api/v1/contact-us",
         {
           method: "POST",
           headers: {
