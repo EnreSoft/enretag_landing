@@ -53,6 +53,12 @@ export default function ContactForm({
 
       if (response.ok) {
         toast.success("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        });
       } else {
         toast.error("Failed to send message. Please try again.");
       }

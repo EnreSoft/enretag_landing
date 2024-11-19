@@ -29,6 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Toaster position="top-center" />
         {children}
+        <div className="elfsight-app-ebcbeb84-d046-414b-9158-1f627a079e2e" data-elfsight-app-lazy></div>
         <Footer lng={lng} />
         <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
@@ -36,33 +37,7 @@ export default function RootLayout({
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
         ></script>
-        <Script id="amazon-connect-script" strategy="afterInteractive">
-        {`
-          (function(w, d, x, id) {
-            var s = d.createElement('script');
-            s.src = 'https://dtn7rvxwwlhud.cloudfront.net/amazon-connect-chat-interface-client.js';
-            s.async = true;
-            s.id = id;
-            d.getElementsByTagName('head')[0].appendChild(s);
-            w[x] = w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
-          })(window, document, 'amazon_connect', 'aca169d6-a60d-4dba-9016-126104af36e2');
-
-          amazon_connect('styles', {
-            iconType: 'CHAT',
-            openChat: { color: '#ffffff', backgroundColor: '#123456' },
-            closeChat: { color: '#ffffff', backgroundColor: '#123456' }
-          });
-
-          amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdIeHdLZjBQTE1qV0ZuSFVBeFpGVXplQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNV0dKN0ZsZkVOREtTbHkzYUFnRVFnQ3RZdXlPSFJLOXl0WS81UlVKTzZna0trd3h1QXlWSk5jVUFBWnpjNUNUTFZMdXdpekZ4TUMrbTRtSEw6OlpkTW0yR2JLcXY0YkgvaVR3L3Y1UzhyZmRkSTE1RmY4YktKQnBmZEx0OXVnc2o5aHdGaTN2OHkwTVpqT2ZLazY2clpybnhXWUJFejRkSDVsR3hKcGMzY0pDTE1QRFAzZ0JLUTFoT0RmNWF4RlJBdURLQVBVb2htaHM4WENqMlNqYlI2dHQwYmtHQ2ZEZksxeVBjWTNMNWVQbVRqV1JKQT0=');
-
-          amazon_connect('supportedMessagingContentTypes', [
-            'text/plain',
-            'text/markdown',
-            'application/vnd.amazonaws.connect.message.interactive',
-            'application/vnd.amazonaws.connect.message.interactive.response'
-          ]);
-        `}
-      </Script>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
       </body>
     </html>
   );
