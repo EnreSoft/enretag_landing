@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Toaster position="top-center" />
         {children}
-        <div className="elfsight-app-ebcbeb84-d046-414b-9158-1f627a079e2e" data-elfsight-app-lazy></div>
+        {/* <div className="elfsight-app-ebcbeb84-d046-414b-9158-1f627a079e2e" data-elfsight-app-lazy></div> */}
         <Footer lng={lng} />
         <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
@@ -37,7 +37,9 @@ export default function RootLayout({
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
         ></script>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        {/* <script src="https://static.elfsight.com/platform/platform.js" async></script> */}
+        {lng !== 'tr' && <script src="//code.jivosite.com/widget/v4pCqDBYLq" async></script>}
+        {lng === 'tr' && <script src="//code.jivosite.com/widget/1UM22JYiPk" async></script>}
       </body>
     </html>
   );
