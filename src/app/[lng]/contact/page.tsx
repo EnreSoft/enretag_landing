@@ -58,8 +58,12 @@ export default async function ContactUs({ params: { lng } }: { params: { lng: st
                 <p className="mt-2 text-sm text-main-bg-color dark:text-gray-400">
                   {t('contact-whatsapp')}
                 </p>
-                <a target="_blank" href="https://wa.me/19174155816" className="mt-2 text-sm text-button-bg-color dark:text-blue-400">
-                  {t("USA")} : +1 917 415 5816
+                <a
+                  target="_blank"
+                  href={lng === "tr" ? "https://wa.me/905421730852" : "https://wa.me/19174155816"}
+                  className="mt-2 text-sm text-button-bg-color dark:text-blue-400"
+                >
+                  {lng === "tr" ? "Türkiye: +90 542 173 08 52" : "USA: +1 917 415 5816"}
                 </a>
               </div>
 
@@ -90,7 +94,7 @@ export default async function ContactUs({ params: { lng } }: { params: { lng: st
                   {t('contact-working-hours')}
                 </p>
                 <p className="mt-2 text-sm  text-button-bg-color dark:text-blue-400">
-                  {t('USA')} : +1 917 415 5816
+                  {lng === "tr" ? "Türkiye: +90 542 173 08 52" : "USA: +1 917 415 5816"}
                 </p>
               </div>
             </div>

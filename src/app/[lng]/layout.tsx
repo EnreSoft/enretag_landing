@@ -39,7 +39,35 @@ export default function RootLayout({
         ></script>
         {/* <script src="https://static.elfsight.com/platform/platform.js" async></script> */}
         {lng !== 'tr' && <script src="//code.jivosite.com/widget/v4pCqDBYLq" async></script>}
-        {lng === 'tr' && <script src="//code.jivosite.com/widget/1UM22JYiPk" async></script>}
+        {lng === "tr" && (
+          <>
+            <script src="//code.jivosite.com/widget/1UM22JYiPk" async></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  !function(f,b,e,v,n,t,s)
+                  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                  n.queue=[];t=b.createElement(e);t.async=!0;
+                  t.src=v;s=b.getElementsByTagName(e)[0];
+                  s.parentNode.insertBefore(t,s)}(window, document,'script',
+                  'https://connect.facebook.net/en_US/fbevents.js');
+                  fbq('init', '545244048398834');
+                  fbq('track', 'PageView');
+                `,
+              }}
+            ></script>
+            <noscript>
+              <img
+                height="1"
+                width="1"
+                style={{ display: "none" }}
+                src="https://www.facebook.com/tr?id=545244048398834&ev=PageView&noscript=1"
+              />
+            </noscript>
+          </>
+        )}
       </body>
     </html>
   );

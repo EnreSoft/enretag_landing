@@ -11,7 +11,7 @@ export default async function Footer({ lng }: { lng: string }) {
           </a>
           <ul className="mt-10 flex space-x-5">
             <li>
-              <a href="javascript:void(0)">
+              <a target="_blank" href="https://www.facebook.com/people/Enretag-Warehouse-Services/61567192261030/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -43,7 +43,7 @@ export default async function Footer({ lng }: { lng: string }) {
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)">
+              <a target="_blank" href={lng === "tr" ? "https://www.instagram.com/enretagtr/" : "https://www.instagram.com/enretagus/"}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -239,7 +239,9 @@ export default async function Footer({ lng }: { lng: string }) {
                     />
                   </g>
                 </svg>
-                <p className="text-gray-300">USA : +1 917 415 5816</p>
+                <p className="text-gray-300">
+                  {lng === "tr" ? "Türkiye: +90 542 173 08 52" : "USA: +1 917 415 5816"}
+                </p>
               </div>
             </li>
             <li>
@@ -262,9 +264,15 @@ export default async function Footer({ lng }: { lng: string }) {
                     fill="#fff"
                   />
                 </svg>
-                <div><a target="_blank" href="https://wa.me/19174155816" className="mt-2 text-sm text-white dark:text-blue-400">
-                  {("USA")} : +1 917 415 5816
-                </a></div>
+                <div>
+                  <a
+                    target="_blank"
+                    href={lng === "tr" ? "https://wa.me/905421730852" : "https://wa.me/19174155816"}
+                    className="mt-2 text-sm text-button-bg-color dark:text-blue-400"
+                  >
+                    {lng === "tr" ? "Türkiye: +90 542 173 08 52" : "USA: +1 917 415 5816"}
+                  </a>
+                </div>
               </div>
             </li>
             <li>
