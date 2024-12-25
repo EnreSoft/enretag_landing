@@ -26,7 +26,7 @@ export default function RootLayout({
 }: { children: React.ReactNode, params: { lng: string } }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={inter.className}>
+      <body style={{overflowX: 'hidden'}} className={inter.className}>
       <Toaster position="top-center" />
         {children}
         {/* <div className="elfsight-app-ebcbeb84-d046-414b-9158-1f627a079e2e" data-elfsight-app-lazy></div> */}

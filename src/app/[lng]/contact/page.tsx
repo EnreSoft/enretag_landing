@@ -22,7 +22,7 @@ export default async function ContactUs({ params: { lng } }: { params: { lng: st
             </p>
 
             <h1 className="mt-2 text-2xl font-semibold text-button-bg-color md:text-3xl dark:text-white">
-              {t('Contact to our firendly team.')}
+              {t('Contact to our friendly team.')}
             </h1>
 
             <p className="mt-3 text-main-bg-color dark:text-gray-400">
