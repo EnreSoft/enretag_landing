@@ -54,7 +54,7 @@ export default async function HeroSection({ lng }: { lng: string }) {
             <div className="mt-8 flex flex-wrap gap-4 animate-fade-up animate-once animate-duration-[1000ms] animate-delay-[1000ms] animate-ease-linear">
               <a
                 href={`/${lng}/contact`}
-                className="block w-full rounded bg-button-bg-color px-12 py-3 text-lg font-medium text-white shadow hover:bg-amber-500 focus:outline-none focus:ring active:bg-[#] sm:w-auto"
+                className="block w-full rounded bg-button-bg-color px-12 py-3 text-lg font-medium text-white shadow hover:bg-amber-500 focus:outline-none focus:ring active:bg-[#] sm:w-auto text-center"
               >
                 {t('Get a Quote')}
               </a>

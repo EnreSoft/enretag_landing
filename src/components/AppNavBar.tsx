@@ -21,7 +21,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
             href={`/${props.lng}`}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/logo-white.png" className="h-16" alt="Flowbite Logo" />
+            <img src="/logo-white.png" className="h-16 sm:h-16" alt="enretag logo" />
           </a>
           <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
            <LanguageSwitcher lng={props.lng}/>
@@ -29,7 +29,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
               href="https://app.enretag.com/en/home/login"
               target="_blank"
               type="button"
-              className="text-white bg-button-bg-color hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white bg-button-bg-color hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hidden md:inline"
             >
               {t("Login/Register")}
               </Link>
@@ -41,7 +41,7 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
               aria-controls="navbar-cta"
               aria-expanded="false"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only bg-red-600">Open main menu</span>
               <svg
                 className="w-5 h-5"
                 aria-hidden="true"
@@ -169,6 +169,14 @@ export default async function AppNavBar(props: Readonly<AppNavBarProps>) {
                   className="block py-2 px-3 lg:p-0 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-button-bg-color  transition duration-400"
                 >
                   {t("Contact")}
+                </a>
+              </li>
+              <li className="md:hidden">
+                <a
+                  href={`https://app.enretag.com/en/home/login`}
+                  className="block py-2 px-3 lg:p-0 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-button-bg-color  transition duration-400"
+                >
+                  {t("Login/Register")}
                 </a>
               </li>
             </ul>
